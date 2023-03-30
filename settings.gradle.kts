@@ -17,6 +17,8 @@
 rootProject.name = "qalipsis-plugins-jms"
 
 include(
-    "jms"
+    "qalipsis-plugin-jms"
 )
+
+project(":qalipsis-plugin-jms").projectDir = File(rootDir, "jms")
 
