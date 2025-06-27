@@ -40,7 +40,8 @@ internal class JmsJsonDeserializerTest {
     internal data class UserExample(val id: Int, val name: String, val createdAt: Instant)
 
     companion object {
-        private val mapper = JsonMapper().registerModule(JavaTimeModule()).registerModule(KotlinModule())
+        private val mapper =
+            JsonMapper().registerModule(JavaTimeModule()).registerModule(KotlinModule.Builder().build())
     }
 
     @Test
